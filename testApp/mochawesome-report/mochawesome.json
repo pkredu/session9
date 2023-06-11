@@ -1,0 +1,235 @@
+{
+  "stats": {
+    "suites": 3,
+    "tests": 6,
+    "passes": 6,
+    "pending": 0,
+    "failures": 0,
+    "start": "2023-06-10T04:31:25.724Z",
+    "end": "2023-06-10T04:31:25.768Z",
+    "duration": 44,
+    "testsRegistered": 6,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "9dbb6b1a-b2b7-40a9-a52f-af689d6d9678",
+      "title": "",
+      "fullFile": "",
+      "file": "",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "ec969f09-bc84-4d56-9541-948cb813b358",
+          "title": "1 - Testing the home page",
+          "fullFile": "/Users/pawan_dubey/edu_batch/2023_2/9_session_all/in_session/testApp/test/api.test.js",
+          "file": "/test/api.test.js",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "should return status code 200(OK)",
+              "fullTitle": "1 - Testing the home page should return status code 200(OK)",
+              "timedOut": false,
+              "duration": 12,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "chai.request(`http://localhost:6500`)\n.get('/')\n.then((response)=>{\n    expect(response).to.have.status(200);\n})\n.catch(err=>{\n    throw(err);\n})",
+              "err": {},
+              "uuid": "a8b408be-6944-4964-bee8-a3256881245e",
+              "parentUUID": "ec969f09-bc84-4d56-9541-948cb813b358",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "a8b408be-6944-4964-bee8-a3256881245e"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 12,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 10000
+        },
+        {
+          "uuid": "eef45636-22fe-4841-b9e6-04510b29b0af",
+          "title": "2 - Testing the APIs",
+          "fullFile": "/Users/pawan_dubey/edu_batch/2023_2/9_session_all/in_session/testApp/test/api.test.js",
+          "file": "/test/api.test.js",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "should return status code 200(OK)",
+              "fullTitle": "2 - Testing the APIs should return status code 200(OK)",
+              "timedOut": false,
+              "duration": 1,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "chai.request(`http://localhost:6500`)\n.get('/allMovies')\n.then((response)=>{\n    expect(response).to.have.status(200);\n})\n.catch(err=>{\n    throw(err);\n})",
+              "err": {},
+              "uuid": "d62983c7-e282-4c61-a400-632bd5514ada",
+              "parentUUID": "eef45636-22fe-4841-b9e6-04510b29b0af",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "should not return status code !201(created)",
+              "fullTitle": "2 - Testing the APIs should not return status code !201(created)",
+              "timedOut": false,
+              "duration": 4,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "chai.request(`http://localhost:6500`)\n        .get('/movies/db')\n        .then((response)=>{\n            assert.notEqual(response.statusCode,201);\n        })\n        .catch(err=>{\n            throw(err);\n        })",
+              "err": {},
+              "uuid": "42caa130-9706-4e2b-9cd8-cbecebcac20a",
+              "parentUUID": "eef45636-22fe-4841-b9e6-04510b29b0af",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "should return status code 200(OK)",
+              "fullTitle": "2 - Testing the APIs should return status code 200(OK)",
+              "timedOut": false,
+              "duration": 1,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "chai.request(`http://localhost:6500`)\n        .get('/movies/db')\n        .then((response)=>{\n            assert.notEqual(response.statusCode,201);\n        })\n        .catch(err=>{\n            throw(err);\n        })",
+              "err": {},
+              "uuid": "615c5d66-2509-44cb-8127-0bb705047a2b",
+              "parentUUID": "eef45636-22fe-4841-b9e6-04510b29b0af",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "should return status code 200(OK)",
+              "fullTitle": "2 - Testing the APIs should return status code 200(OK)",
+              "timedOut": false,
+              "duration": 1,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "chai.request(`http://localhost:6500`)\n.get('/allMovies')\n.then((response)=>{\n    expect(response.text).to.be.an('String');\n})\n.catch(err=>{\n    throw(err);\n})",
+              "err": {},
+              "uuid": "e9f8467d-c3a9-4c3d-af8e-e619a6cfbde7",
+              "parentUUID": "eef45636-22fe-4841-b9e6-04510b29b0af",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "d62983c7-e282-4c61-a400-632bd5514ada",
+            "42caa130-9706-4e2b-9cd8-cbecebcac20a",
+            "615c5d66-2509-44cb-8127-0bb705047a2b",
+            "e9f8467d-c3a9-4c3d-af8e-e619a6cfbde7"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 7,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 10000
+        },
+        {
+          "uuid": "a59b5981-63f9-4431-941d-1cd39d78f3e2",
+          "title": "3 - Testing the udner dev apis",
+          "fullFile": "/Users/pawan_dubey/edu_batch/2023_2/9_session_all/in_session/testApp/test/api.test.js",
+          "file": "/test/api.test.js",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "should return status code 404(for under dev) ",
+              "fullTitle": "3 - Testing the udner dev apis should return status code 404(for under dev) ",
+              "timedOut": false,
+              "duration": 1,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "chai.request(`http://localhost:6500`)\n.get('/inDev')\n.then((response)=>{\n    expect(response).to.have.status(404);\n})\n.catch(err=>{\n    throw(err);\n})",
+              "err": {},
+              "uuid": "93202b37-18de-4c45-b097-38387bd85969",
+              "parentUUID": "a59b5981-63f9-4431-941d-1cd39d78f3e2",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "93202b37-18de-4c45-b097-38387bd85969"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 1,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 10000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 10000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "6.2.3"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": null,
+      "version": "6.2.0"
+    }
+  }
+}
